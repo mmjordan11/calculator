@@ -1,0 +1,79 @@
+body {
+  background-color: #252f3a;
+}
+button {
+  border-radius: 50px;
+  font-size: 50px;
+}
+
+#display {
+  height: 100px;
+  width: 400px;
+  background-color: gray;
+  border-radius: 25px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#entry {
+  padding: 1em;
+  font-size: 50px;
+}
+
+#keys {
+  display: grid;
+  grid-template-areas:
+    "clear divide multiply subtract"
+    "num-keys num-keys num-keys add"
+    "num-keys num-keys num-keys add"
+    "num-keys num-keys num-keys equals"
+    "num-keys num-keys num-keys equals";
+  width: 400px;
+  margin: auto;
+}
+
+.fn-key {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+
+[data-key="8"] {
+  grid-area: clear;
+}
+[data-key="47"] {
+  grid-area: divide;
+}
+[data-key="42"] {
+  grid-area: multiply;
+}
+[data-key="45"] {
+  grid-area: subtract;
+}
+[data-key="43"] {
+  grid-area: add;
+  height: 200px;
+}
+[data-key="61"] {
+  grid-area: equals;
+  height: 200px;
+}
+
+
+
+#num-keys {
+  grid-area: num-keys;
+  display: grid;
+  direction: rtl;
+}
+
+[data-key="48"] {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+[data-key="190"] {
+  grid-row-start: 4;
+  grid-column-start: 1;
+}
